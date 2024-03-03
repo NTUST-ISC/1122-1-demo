@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1046791889778659371/1148533655103352872/logo.png?ex=65c1ec52&is=65af7752&hm=dc37e19011af62e6bdafb79b64df6005290cd575a56639c29509afded15dc979&" type="image/x-icon" />
+    <link href="/static/main.css" rel="stylesheet">
+    <title>[NTUSTISC] IP Search</title>
+</head>
+<body class="fcc">
+    <div class="container fcc">
+        <img class="logo" src="https://cdn.discordapp.com/attachments/1046791889778659371/1148533655103352872/logo.png?ex=65c1ec52&is=65af7752&hm=dc37e19011af62e6bdafb79b64df6005290cd575a56639c29509afded15dc979&" alt="">
+        <h1 class="text">Domain To IP Converter</h1>
+        <form action="/get_ip" method="post" class="fcc w-100">
+            <div class="input__container w-100">
+                <div class="shadow__input"></div>
+                <input name="domain_name" class="input__search" type="" placeholder="請輸入 Domain name">
+                <button name="domain_submit" class="input__button__shadow">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="20px" width="20px">
+                        <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#17202A"></path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+        <div class="card">
+            <p class="text text__output"> 
+                {% for para in data %}
+                {{ para }} <br>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+</body>
+</html>
